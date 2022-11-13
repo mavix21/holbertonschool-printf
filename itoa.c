@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * itoa_signed - Converts an integer into a character string
+ * itoa_sgnd - Converts an integer into a character string
  * @args: Argument of type int
  * @length: Length modifier
  *
  * Return: Pointer to character string
  */
-char *itoa_signed(va_list args, int length)
+char *itoa_sgnd(va_list args, int length)
 {
 	int rem, number, number_sign = 1, pos = 0;
 	long int number_l;
@@ -42,14 +42,14 @@ char *itoa_signed(va_list args, int length)
 }
 
 /**
- * itoa_unsigned - Converts an unsigned integer into a character string
+ * itoa_unsgnd - Converts an unsigned integer into a character string
  * @args: Argument of type unsigned int
  * @length: Length modifier
  * @base: The unsigned int will be converted to this base
  *
  * Return: Pointer to character string
  */
-char *itoa_unsigned(va_list args, int length, int base)
+char *itoa_unsgnd(va_list args, int length, int base)
 {
 	int rem, pos = 0;
 	unsigned int number_u;
