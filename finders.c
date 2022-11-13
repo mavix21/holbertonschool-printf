@@ -11,12 +11,13 @@
  */
 int pos_first_ltr_or_perc(const char *format)
 {
-        int i;
-        for (i = 0; format[i]; i++)
-        {
-                if (_isalpha(format[i]) || format[i] == '%')
-                        return (i);
-        }
+	int i;
 
-        return (-1);
+	for (i = 0; format[i]; i++)
+	{
+		if (_isalpha(format[i]) || format[i] == '%')
+			return (i);
+	}
+
+	return (-1);
 }
