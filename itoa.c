@@ -68,11 +68,12 @@ char *itoa_unsgnd(va_list args, int length, int base)
 	}
 
 	do {
-		rem = number_lu % 10;
-		str_digits[pos++] = rem + '0';
-		number_lu /= 10;
+		rem = number_lu % base;
+		str_digits[pos++] = hex_digits[rem];
+		number_lu /= base;
 	} while (number_lu > 0);
 
 	str_digits[pos] = '\0';
+
 	return (str_digits);
 }
