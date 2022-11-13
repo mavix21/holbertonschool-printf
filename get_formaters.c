@@ -19,7 +19,7 @@ char *get_formaters(const char *format)
 	if (pos < 0)
 		return (NULL);
 
-	if (is_specificator(format[pos]))
+	if (is_specifier(format[pos]))
 	{
 		formaters = malloc((pos + 2) * sizeof(char));
 		formaters = _strncpy(formaters, format, pos + 1);
@@ -28,7 +28,7 @@ char *get_formaters(const char *format)
 
 	if (format[pos] == 'l' || format[pos] == 'h')
 	{
-		if (is_specificator(format[pos + 1]))
+		if (is_specifier(format[pos + 1]))
 		{
 			formaters = malloc((pos + 3) * sizeof(char));
 			formaters = _strncpy(formaters, format, pos + 2);
