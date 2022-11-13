@@ -19,11 +19,11 @@ void store_arg(char s, va_list arg, get_c c_st[], get_n n_st[], char *b, int l)
 {
 	int i, j;
 
-	for (i = 0; l_st[i].specifier != '\0'; i++)
+	for (i = 0; c_st[i].specifier != '\0'; i++)
 	{
-		if (s == l_st[i].specifier)
+		if (s == c_st[i].specifier)
 		{
-			l_st[i].f(arg, b);
+			c_st[i].f(arg, b);
 			return;
 		}
 	}
