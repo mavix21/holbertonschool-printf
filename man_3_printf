@@ -1,0 +1,104 @@
+.TH _PRINTF 1 2022-11-12 GNU
+
+.SH NAME
+_printf - formatted output conversion
+
+.B SYNOPSIS
+.B #include \fB"main.h"
+.B _printf
+\fB\FORMAT\fR
+[\fB\ARGUMENT...\fR]
+
+.SH DESCRIPTION
+
+.B _printf
+\fB\ARGUMENT(s)\fR according to \fB\FORMAT\fR:
+\fB\FORMAT\fR controls the output as in C _printf. Interpreted sequences are:
+
+.B Return value
+.in +2n
+Upon successful return, \fB_printf()\fR returns the number of characters
+printed (excluding the null byte used to end output to strings).
+
+.B Format of the format string
+.in +2n
+The format string is a constant character string composed of zero or more
+directives: ordinary characters (not \fB%\fR) which are copied unchanged to
+the output stream; and conversion specifications, each of which results in
+fetching zero or more subsequent arguments. Conversion specification is
+introduced by the character \fB%\fR and ends with a \fIconversion specifier\fR.
+
+In between the \fB%\fR character and conversion specifier, there may be, an
+optional \fIlength\fR modifier. The arguments must correspond with the
+conversion specifier, and are used in the order given.
+
+.B Flag Characters
+.in +2n
+The character \fB%\fR may be followed by zero or more of the following flags:
+
+.RS
+.B d, i
+.in +2n
+The \fIint\fR argument is converted to signed decimal notation.
+.in
+.RE
+
+.RS
+.B b
+.in +2n
+The \fIunsigned int\fR argument is converted to binary.
+.in
+.RE
+
+.RS
+.B o, u, x, X
+.in +2n
+The \fIunsigned int\fR argument is converted to unsigned octal (\fBo\fR),
+unsigned decimal (\fBu\fR), or unsigned hexadecimal (\fBx\fR and \fBX\fR)
+notation. The letters \fBabcdef\fR are used for \fBx\fR conversions; the
+letters \fBABCDEF\fR are used for \fBX\fR conversions.
+.in
+.RE
+
+.RS
+.B c
+.in +2n
+The \fIint\fR argument is converted to an \fIunsigned char\fR, and the
+resulting character is written.
+.in
+.RE
+
+.RS
+.B s
+.in +2n
+The \fIconst char *\fR argument is expected to be a pointer to a character
+array (pointer to a string). Characters from the array are written starting
+from the first element of the array and ending at, but not including, the
+terminating null byte ('\\0').
+.in
+.RE
+
+.RS
+.B r
+.in +2n
+Identical to the \fBs\fR conversion specifier, except characters from the
+array are written in reverse, starting from (but not including) the
+terminating null byte ('\\0') and ending at the first element of the array.
+.in
+.RE
+
+.RS
+.B R
+.in +2n
+Identical to the \fBs\fR conversion specifier, except each character of the
+array is converted to its corresponding character in ROT13 before breing written.
+.in
+.RE
+
+.RS
+.B %
+.in +2n
+A '%' is written. No argument is converted. The complete conversion
+specification is '%%'.
+.in
+.RE
