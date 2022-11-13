@@ -102,3 +102,44 @@ A '%' is written. No argument is converted. The complete conversion
 specification is '%%'.
 .in
 .RE
+
+.SH EXAMPLE
+To print the name of dogs in the form "Pepe, pipo, papo", followed by a new line,
+where \fIdog1\fR, \fIdog2\fR, \fIdog3\fR are pointers to strings:
+
+.RS
+#include "main.h"
+
+int main(void)
+{
+        char *dog1 = "pepe";
+        char *dog2 = "pipo";
+        char *dog3 = "papo";
+       _printf("%s,%s,%s \n",dog1,dog2,dog3);
+}
+.RE
+
+To print the values of LONG_MAX and LONG_MIN aligned.
+
+.RS
+#include "main.h"
+#include <limits.h>
+int main(void)
+{
+        _printf("%ld -> LONG_MAX\n", LONG_MAX);
+        _printf("%ld -> LONG_MIN\n", LONG_MAX);
+}
+.RE
+
+to print the result of basic mathematical operations pretended by signs.
+
+.RS
+#include "main.h"
+
+int main(void)
+{
+        _printf("%d + %d = %d\n", 1, 2, 1 + 2);
+        _printf("%d - %d = %d\n", 10, 20, 10 - 20);
+
+}
+.RE
