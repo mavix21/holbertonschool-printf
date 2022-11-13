@@ -17,7 +17,6 @@ void analize_formaters(char *formaters, va_list args, char *buffer)
 		{'c', store_c},
 		{'s', store_str},
 		{'%', store_c},
-		{'S', store_Str},
 		{'r', store_rev},
 		{'\0', NULL},
 	};
