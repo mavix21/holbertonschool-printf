@@ -91,3 +91,25 @@ void store_octal(va_list args, char *buffer, int length)
         free(str_digits);
 }
 
+/**
+ * store_hex - Stores digits of unsigned int argument, in base 16, in buffer
+ * @args: Argument of type unsigned int
+ * @buffer: Buffer where the digits in base 16 will be stored
+ * @length: Length modifier
+ *
+ * Return: Nothing
+ */
+void store_hex(va_list args, char *buffer, int length)
+{
+        char *str_digits;
+        int pos, str_len;
+        int base = 16;
+
+        str_digits = itoa_unsigned(args, length, base);
+        str_len = _strlen(str_digits);
+        
+        for (pos = str_len - 1; pos >= 0; pos--)
+                *buffer++ = str_digits[pos];
+
+        free(str_digits);
+}
