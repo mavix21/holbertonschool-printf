@@ -31,4 +31,12 @@ char *get_formaters(const char *format)
                 if (is_specificator(format[pos + 1]))
                 {
                         formaters = malloc((pos + 3) *
-					   
+sizeof(char));
+                        formaters = _strncpy(formaters, format, pos + 2);
+                        return (formaters);
+                }
+                return (NULL);
+        }
+
+        return (NULL);
+}
