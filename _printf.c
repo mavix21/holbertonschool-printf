@@ -9,8 +9,8 @@
 int _printf(const char *format, ...)
 {
 	char *formaters;
-	va_list args;
 	unsigned int number_of_char_printed = 0;
+	va_list args;
 
 	/* Set a local buffer of 1024 chars and fill it out with nulls */
 	char *buffer = memset_checked(1024 * sizeof(char), '\0');
@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 		{
 			*buffer = *format++;
 		}
-		/* Makes buffer points to the first null byte */
+		/* Make buffer points to the first null byte */
 		for (; *buffer != '\0'; buffer++, number_of_char_printed++)
 		;
 	}

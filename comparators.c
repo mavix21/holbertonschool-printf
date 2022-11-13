@@ -12,7 +12,7 @@ int _isalpha(int c)
 {
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 	{
-		      return (1);
+		return (1);
 	}
 
 	return (0);
@@ -26,14 +26,14 @@ int _isalpha(int c)
  */
 int is_specifier(char c)
 {
-        char spec[] = "cs%dibuoxXSprR";
-        int i;
+	char spec[] = "cs%dibuoxXSprR";
+	int i;
 
-        for (i = 0; spec[i]; i++)
-        {
-                if (c == spec[i])
-                        return (1);
-        }
+	for (i = 0; spec[i]; i++)
+	{
+		if (c == spec[i])
+			return (1);
+	}
 
-        return (0);
+	return (0);
 }
