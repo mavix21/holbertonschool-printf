@@ -46,7 +46,7 @@ char *_strncpy(char *, const char *, int);
 int pos_first_ltr_or_perc(const char *format);
 
 /* Comparators */
-int is_specificator(char c);
+int is_specifier(char c);
 int _isalpha(int);
 
 char *memset_checked(unsigned int, char);
