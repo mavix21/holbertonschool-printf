@@ -17,3 +17,23 @@ int _isalpha(int c)
 
 	return (0);
 }
+
+/**
+ * is_specifier - Check if a character is a conversion specifier
+ * @c: The character to be checked
+ *
+ * Return: 1 if the character is a valid specifier. 0 otherwise.
+ */
+int is_specifier(char c)
+{
+        char spec[] = "cs%dibuoxXSprR";
+        int i;
+
+        for (i = 0; spec[i]; i++)
+        {
+                if (c == spec[i])
+                        return (1);
+        }
+
+        return (0);
+}
