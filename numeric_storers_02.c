@@ -27,5 +27,5 @@ int store_Hex(va_list args, char *buffer, int length)
 		*buffer++ = str_digits[pos];
 	free(str_digits);
 
-	return(str_len);
+	return (str_len);
 }

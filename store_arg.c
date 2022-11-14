@@ -14,7 +14,6 @@
  *
  * Return: Number of characters of the argument to be stored
  */
-
 int store_arg(char s, va_list arg, get_c c_st[], get_n n_st[], char *b, int l)
 {
 	int i, j, arg_length;

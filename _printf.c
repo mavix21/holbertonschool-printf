@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 	number_of_char_printed = traverse_format(format, args, buffer);
 	va_end(args);
 
-	if (number_of_char_printed >= 0) 
+	if (number_of_char_printed >= 0)
 	{
 		print_buffer(buffer, number_of_char_printed);
 	}
