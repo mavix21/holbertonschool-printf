@@ -74,6 +74,7 @@ int main(void)
 ```
 
 ## Testing :thumbsup:
+
 ```
 $ ./a.out
 Let's try to printf a simple sentence.
@@ -99,7 +100,7 @@ Len:[12]
 Unknown:[%r]
 Unknown:[%r]
 ```
-##More Examples :technologist:
+## More Examples :technologist:
 
 + To print the name of dogs in the form "Pepe, pipo, papo", followed by a new line,
 where `dog1`,`dog2`, `dog3` are pointers to strings:
