@@ -16,7 +16,7 @@ void analize_formaters(char *formaters, va_list args, char *buffer)
 	get_c c_st[] = {
 		{'c', store_c},
 		{'s', store_str},
-		{'%', store_c},
+		{'%', store_perc},
 		{'r', store_rev},
 		{'\0', NULL},
 	};
