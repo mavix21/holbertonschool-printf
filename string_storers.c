@@ -43,7 +43,7 @@ int store_str(va_list args, char *buffer)
 	if (str == NULL)
 	{
 		str = "(null)";
-		str_len = 0;
+		str_len = _strlen(str);
 	}
 	else
 	{
