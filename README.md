@@ -99,6 +99,46 @@ Len:[12]
 Unknown:[%r]
 Unknown:[%r]
 ```
+##More Examples :technologist:
+
++ To print the name of dogs in the form "Pepe, pipo, papo", followed by a new line,
+where `dog1`,`dog2`, `dog3` are pointers to strings:
+
+```
+#include "main.h"
+
+int main(void)
+{
+        char *dog1 = "pepe";
+        char *dog2 = "pipo";
+        char *dog3 = "papo";
+       _printf("%s,%s,%s \n",dog1,dog2,dog3);
+}
+```
++ To print the values of LONG_MAX and LONG_MIN aligned.
+
+```
+#include "main.h"
+#include <limits.h>
+int main(void)
+
+{
+        _printf("%ld -> LONG_MAX\n", LONG_MAX);
+        _printf("%ld -> LONG_MIN\n", LONG_MAX);
+}
+```
++ to print the result of basic mathematical operations pretended by signs.
+
+```
+#include "main.h"
+
+int main(void)
+{
+        _printf("%d + %d = %d\n", 1, 2, 1 + 2);
+        _printf("%d - %d = %d\n", 10, 20, 10 - 20);
+
+}
+```
 
 ## Authors :black_nib:
 

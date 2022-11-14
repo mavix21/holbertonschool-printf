@@ -3,7 +3,7 @@
 /**
  * traverse_format - Goes through format
  * @format: Format string
- * @arg: Argument to be stored
+ * @args: Argument to be stored
  * @buffer: Buffer in which the characters to be printed will be stored
  *
  * Return: Number of characters to be printed
