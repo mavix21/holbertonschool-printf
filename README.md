@@ -116,7 +116,10 @@ int main(void)
        _printf("%s,%s,%s \n",dog1,dog2,dog3);
 }
 ```
-
+```
+$ ./a.out
+Pepe, pipo, papo
+```
 + To print the values of LONG_MAX and LONG_MIN aligned.
 
 ```
