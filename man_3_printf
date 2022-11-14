@@ -148,7 +148,7 @@ int main(void)
 printf(3)<https://man7.org/linux/man-pages/man3/printf.3.html>
 
 The \fB_printf()\fR function emulates functionality of the C standard library
-function \fBprintf()\fR. This man page borrows from the corresponding Linux
+function \fBprintf()\fR. This man page borrows from the corresponding man7/linux
 man page printf(3).
 
 .SH AUTHOR
