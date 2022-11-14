@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * store_c - Stores character in buffer
  * @args: Argument of type character
@@ -10,6 +11,20 @@ void store_c(va_list args, char *buffer)
 {
 	*buffer = va_arg(args, int);
 }
+
+/**
+ * store_perc - Stores a percent character in buffer
+ * @args: Argument of type character
+ * @buffer: Buffer where the character will be stored
+ *
+ * Return: Nothing
+ */
+void store_perc(va_list args, char *buffer)
+{
+	(void)args;
+	*buffer = '%';
+}
+
 /**
  * store_str - Stores string in buffer
  * @args: Argument of type string
@@ -32,6 +47,7 @@ void store_str(va_list args, char *buffer)
 		buffer++;
 	}
 }
+
 /**
  * store_rev - Stores string in reverse order
  * @args: Argument of type string
