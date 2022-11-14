@@ -60,6 +60,7 @@ char *itoa_unsgnd(va_list, int, int);
 /* Storing functions */
 void store_arg(char, va_list, get_c c_st[], get_n n_st[], char *, int);
 void store_c(va_list, char *);
+void store_perc(va_list, char *);
 void store_str(va_list, char *);
 void store_Str(va_list, char *);
 void store_rev(va_list, char *);
