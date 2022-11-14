@@ -1,5 +1,5 @@
 <h1 align ="center">
-<img src="https://assets.website-files.com/6105315644a26f77912a1ada/610540e8b4cd6969794fe673_Holberton_School_logo-04-04.svg" height="36%" width="26%">
+0;136;0c<img src="https://assets.website-files.com/6105315644a26f77912a1ada/610540e8b4cd6969794fe673_Holberton_School_logo-04-04.svg" height="36%" width="26%">
 </h1>
 
 # _Printf
@@ -118,6 +118,7 @@ int main(void)
 ```
 ```
 $ ./a.out
+
 Pepe, pipo, papo
 ```
 + To print the values of LONG_MAX and LONG_MIN aligned.
@@ -131,6 +132,12 @@ int main(void)
         _printf("%ld -> LONG_MAX\n", LONG_MAX);
         _printf("%ld -> LONG_MIN\n", LONG_MAX);
 }
+```
+```
+$ ./a.out
+
+9223372036854775807 -> LONG_MAX
+9223372036854775807 -> LONG_MIN
 ```
 
 + to print the result of basic mathematical operations pretended by signs.
