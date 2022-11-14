@@ -12,19 +12,19 @@
  * @b: Buffer where the argument will be stored
  * @l: Length modifier
  *
- * Return: Nothing
+ * Return: Number of characters of the argument to be stored
  */
 
-void store_arg(char s, va_list arg, get_c c_st[], get_n n_st[], char *b, int l)
+int store_arg(char s, va_list arg, get_c c_st[], get_n n_st[], char *b, int l)
 {
-	int i, j;
+	int i, j, arg_length;
 
 	for (i = 0; c_st[i].specifier != '\0'; i++)
 	{
 		if (s == c_st[i].specifier)
 		{
-			c_st[i].f(arg, b);
-			return;
+			arg_length = c_st[i].f(arg, b);
+			return (arg_length);
 		}
 	}
 
@@ -32,11 +32,12 @@ void store_arg(char s, va_list arg, get_c c_st[], get_n n_st[], char *b, int l)
 	{
 		if (s == n_st[j].specifier)
 		{
-			n_st[j].f(arg, b, l);
-			return;
+			arg_length = n_st[j].f(arg, b, l);
+			return (arg_length);
 		}
 	}
 
 	*b = '%';
 	*(b + 1) = s;
+	return (2);
 }
