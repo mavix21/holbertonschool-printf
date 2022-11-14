@@ -7,9 +7,10 @@
  *
  * Return: Nothing
  */
-void store_c(va_list args, char *buffer)
+int store_c(va_list args, char *buffer)
 {
 	*buffer = va_arg(args, int);
+	return (1);
 }
 
 /**
@@ -19,10 +20,11 @@ void store_c(va_list args, char *buffer)
  *
  * Return: Nothing
  */
-void store_perc(va_list args, char *buffer)
+int store_perc(va_list args, char *buffer)
 {
 	(void)args;
 	*buffer = '%';
+	return (1);
 }
 
 /**
@@ -32,7 +34,7 @@ void store_perc(va_list args, char *buffer)
  *
  * Return: Nothing
  */
-void store_str(va_list args, char *buffer)
+int store_str(va_list args, char *buffer)
 {
 	char *str;
 
@@ -46,6 +48,7 @@ void store_str(va_list args, char *buffer)
 		*buffer = *str;
 		buffer++;
 	}
+	return (_strlen(str));
 }
 
 /**
@@ -55,7 +58,7 @@ void store_str(va_list args, char *buffer)
  *
  * Return: Nothing
  */
-void store_rev(va_list args, char *buffer)
+int store_rev(va_list args, char *buffer)
 {
 	char *str;
 	char *str_rev;
@@ -75,4 +78,6 @@ void store_rev(va_list args, char *buffer)
 		buffer++;
 	}
 	free(str_rev);
+
+	return (str_len);
 }
