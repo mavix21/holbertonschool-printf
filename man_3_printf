@@ -127,7 +127,7 @@ To print the values of LONG_MAX and LONG_MIN aligned.
 int main(void)
 {
         _printf("%ld -> LONG_MAX\n", LONG_MAX);
-        _printf("%ld -> LONG_MIN\n", LONG_MAX);
+        _printf("%ld -> LONG_MIN\n", LONG_MIN);
 }
 .RE
 

@@ -130,14 +130,14 @@ int main(void)
 
 {
         _printf("%ld -> LONG_MAX\n", LONG_MAX);
-        _printf("%ld -> LONG_MIN\n", LONG_MAX);
+        _printf("%ld -> LONG_MIN\n", LONG_MIN);
 }
 ```
 ```
 $ ./c.out
 
-9223372036854775807 -> LONG_MAX
-9223372036854775807 -> LONG_MIN
+ 9223372036854775807 -> LONG_MAX
+-9223372036854775807 -> LONG_MIN
 ```
 
 + to print the result of basic mathematical operations pretended by signs.
