@@ -51,6 +51,7 @@ int _isalpha(int);
 
 /* Auxiliar Functions */
 char *memset_checked(unsigned int, char);
+void *_calloc(unsigned int, unsigned int);
 void print_buffer(char *, int);
 int get_length(char);
 char *get_formaters(const char *);
