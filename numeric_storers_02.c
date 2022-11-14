@@ -6,9 +6,9 @@
  * @buffer: Buffer where the digits in base 16 will be stored
  * @length: Length modifier
  *
- * Return: Nothing
+ * Return: Number of digits stored
  */
-void store_Hex(va_list args, char *buffer, int length)
+int store_Hex(va_list args, char *buffer, int length)
 {
 	char *str_digits;
 	int pos, str_len;
@@ -16,7 +16,7 @@ void store_Hex(va_list args, char *buffer, int length)
 
 	str_digits = itoa_unsgnd(args, length, base);
 	str_len = _strlen(str_digits);
-/* Capitalize the letters */
+	/* Capitalize the letters */
 	for (pos = 0; pos < str_len; pos++)
 	{
 		if (str_digits[pos] >= 97 && str_digits[pos] <= 122)
@@ -26,4 +26,6 @@ void store_Hex(va_list args, char *buffer, int length)
 	for (pos = str_len - 1; pos >= 0; pos--)
 		*buffer++ = str_digits[pos];
 	free(str_digits);
+
+	return(str_len);
 }
