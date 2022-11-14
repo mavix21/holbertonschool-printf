@@ -7,11 +7,11 @@
  * @args: Variadic argument
  * @buffer: Buffer where the argument will be stored
  *
- * Return: Nothing
+ * Return: Number of characters of the argument to be printed
  */
-void analize_formaters(char *formaters, va_list args, char *buffer)
+int analize_formaters(char *formaters, va_list args, char *buffer)
 {
-	int formaters_len, length = 0;
+	int formaters_len, length = 0, arg_length = 0;
 	char specifier;
 	get_c c_st[] = {
 		{'c', store_c},
@@ -43,5 +43,7 @@ void analize_formaters(char *formaters, va_list args, char *buffer)
 	specifier = formaters[formaters_len - 1];
 
 	/* Call the argument storer with the proper formatting directives */
-	store_arg(specifier, args, c_st, n_st, buffer, length);
+	arg_length = store_arg(specifier, args, c_st, n_st, buffer, length);
+
+	return (arg_length);
 }
