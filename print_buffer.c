@@ -7,7 +7,7 @@
  *
  * Return: Nothing
  */
-void print_buffer(char *buffer, unsigned int buffer_length)
+void print_buffer(char *buffer, int buffer_length)
 {
 	write(1, buffer, buffer_length);
 	free(buffer);
