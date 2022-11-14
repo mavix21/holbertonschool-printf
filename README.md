@@ -115,6 +115,18 @@ int main(void)
        _printf("%s,%s,%s \n",dog1,dog2,dog3);
 }
 ```
++ To print the values of LONG_MAX and LONG_MIN aligned.
+
+```
+#include "main.h"
+#include <limits.h>
+int main(void)
+
+{
+        _printf("%ld -> LONG_MAX\n", LONG_MAX);
+        _printf("%ld -> LONG_MIN\n", LONG_MAX);
+}
+```
 
 ## Authors :black_nib:
 
