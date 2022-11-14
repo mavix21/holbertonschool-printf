@@ -11,37 +11,37 @@
 int traverse_format(const char *format, va_list args, char *buffer)
 {
 	char *formaters;
-	int buffer_length = 0;
+	int buffer_len = 0, check;
 
 	while (*format != '\0')
 	{
 		if (*format == '%')
 		{
 			if (*(++format) == '\0')
-			{
 				return (-1);
-			}
 			formaters = get_formaters(format);
 			if (formaters == NULL)
 			{
+				buffer = check_buffer(buffer, buffer_len++, 1);
 				*buffer = '%';
-				buffer_length++;
 			}
 			else
 			{
-				buffer_length += analize_formaters(formaters, args, buffer);
+				check = analize_formaters(formaters, args, buffer);
+				buffer = check_buffer(buffer, buffer_len, check);
+				buffer_len += check;
 				format += _strlen(formaters);
 				free(formaters);
 			}
 		}
 		else
 		{
+			buffer = check_buffer(buffer, buffer_len++, 1);
 			*buffer = *format++;
-			buffer_length++;
 		}
 		/* Make buffer points to the first null byte */
 		for (; *buffer != '\0'; buffer++)
 		;
 	}
-	return (buffer_length);
+	return (buffer_len);
 }
