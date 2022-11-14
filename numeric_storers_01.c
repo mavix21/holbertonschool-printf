@@ -6,9 +6,9 @@
  * @buffer: Buffer where the digits, including the minus sign, will be stored
  * @length: Length modifier
  *
- * Return: Nothing
+ * Return: Number of digits stored
  */
-void store_int(va_list args, char *buffer, int length)
+int store_int(va_list args, char *buffer, int length)
 {
 	char *str_digits;
 	int pos, str_len;
@@ -20,6 +20,8 @@ void store_int(va_list args, char *buffer, int length)
 		*buffer++ = str_digits[pos];
 
 	free(str_digits);
+
+	return (str_len);
 }
 
 /**
@@ -28,10 +30,10 @@ void store_int(va_list args, char *buffer, int length)
  * @buffer: Buffer where the digits will be stored
  * @length: Length modifier
  *
- * Return: Nothing
+ * Return: Number of digits stored
  */
 
-void store_unsgnd(va_list args, char *buffer, int length)
+int store_unsgnd(va_list args, char *buffer, int length)
 {
 	char *str_digits;
 	int pos, str_len;
@@ -44,6 +46,8 @@ void store_unsgnd(va_list args, char *buffer, int length)
 		*buffer++ = str_digits[pos];
 
 	free(str_digits);
+
+	return (str_len);
 }
 
 /**
@@ -52,9 +56,9 @@ void store_unsgnd(va_list args, char *buffer, int length)
  * @buffer: Buffer where the digits in base 2 will be stored
  * @length: Length modifier
  *
- * Return: Nothing
+ * Return: Number of digits stored
  */
-void store_bin(va_list args, char *buffer, int length)
+int store_bin(va_list args, char *buffer, int length)
 {
 	char *str_digits;
 	int pos, str_len;
@@ -67,6 +71,8 @@ void store_bin(va_list args, char *buffer, int length)
 		*buffer++ = str_digits[pos];
 
 	free(str_digits);
+
+	return (str_len);
 }
 
 /**
@@ -75,9 +81,9 @@ void store_bin(va_list args, char *buffer, int length)
  * @buffer: Buffer where the digits in base 8 will be stored
  * @length: Length modifier
  *
- * Return: Nothing
+ * Return: Number of digits stored
  */
-void store_octal(va_list args, char *buffer, int length)
+int store_octal(va_list args, char *buffer, int length)
 {
 	char *str_digits;
 	int pos, str_len;
@@ -90,6 +96,8 @@ void store_octal(va_list args, char *buffer, int length)
 		*buffer++ = str_digits[pos];
 
 	free(str_digits);
+
+	return (str_len);
 }
 
 /**
@@ -98,9 +106,9 @@ void store_octal(va_list args, char *buffer, int length)
  * @buffer: Buffer where the digits in base 16 will be stored
  * @length: Length modifier
  *
- * Return: Nothing
+ * Return: Number of digits stored
  */
-void store_hex(va_list args, char *buffer, int length)
+int store_hex(va_list args, char *buffer, int length)
 {
 	char *str_digits;
 	int pos, str_len;
@@ -113,4 +121,6 @@ void store_hex(va_list args, char *buffer, int length)
 		*buffer++ = str_digits[pos];
 
 	free(str_digits);
+
+	return (str_len);
 }
