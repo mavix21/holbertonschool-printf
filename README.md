@@ -108,7 +108,7 @@ Unknown:[%r]
 ## Acknowledgements :pray:
 
 The `_printf` function emulates functionality of the C standard library
-function `printf`. This README borrows from the Linux man page
+function `printf`. This README borrows from the Man7/linux man page
 [printf(3)](https://https://man7.org/linux/man-pages/man3/printf.3.html).
 
 This program was written as part of the curriculum for Holberton School.
