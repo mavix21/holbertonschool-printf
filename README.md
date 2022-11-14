@@ -1,15 +1,15 @@
 <h1 align ="center">
-<img src="https://assets.website-files.com/6105315644a26f77912a1ada/610540e8b4cd6969794fe673_Holberton_School_logo-04-04.svg" height="40%" width="30%">
+<img src="https://assets.website-files.com/6105315644a26f77912a1ada/610540e8b4cd6969794fe673_Holberton_School_logo-04-04.svg" height="36%" width="26%">
 </h1>
 
-# Printf :page_facing_up:
+# _Printf
 
-## Synopsis
+## Synopsis :page_facing_up:
 A formatted output conversion C program completed as part of the low-level
 programming and algorithm track at Holberton School. The program is a pseudo-
 recreation of the C standard library function, 'printf'.
 
-## Description
+## Description :speech_balloon:
 The _printf() function produces output according to a format which is described
 below. This function write its output to the stdout, the standard output stream. Returns the count of printed characters when the function is successful and -1 when the function fails.
 
@@ -27,12 +27,12 @@ The available convertion specifiers are:
 + %r: Print strings in reverse.
 + %R: Print ROT13.
 
-## Usage
+## Usage :running:
 + All the files are to be compiled on Ubuntu 20.04 LTS
 + Compile your code with "gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c"
 + Include the "main.h" header file on the functions using the _printf()
 
-## Example
+## Example :muscle:
 
 ```
 #include "main.h"
@@ -73,7 +73,7 @@ int main(void)
 }
 ```
 
-## Testing
+## Testing :thumbsup:
 ```
 $ ./a.out
 Let's try to printf a simple sentence.
@@ -117,5 +117,5 @@ that prepares students for careers in the tech industry using project-based
 peer learning. For more information, visit [this link](https://www.holbertonschool.com/).
 
 <p align ="center">
-<img src="https://assets.website-files.com/6105315644a26f77912a1ada/610540e8b4cd6969794fe673_Holberton_School_logo-04-04.svg" height="20%" width="10%">
+<img src="https://assets.website-files.com/6105315644a26f77912a1ada/610540e8b4cd6969794fe673_Holberton_School_logo-04-04.svg" height="25%" width="15%">
 </p>
