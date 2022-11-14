@@ -101,7 +101,7 @@ Unknown:[%r]
 Unknown:[%r]
 ```
 ## More Examples :technologist:
-```
+
 + To print the name of dogs in the form "Pepe, pipo, papo", followed by a new line,
 where `dog1`,`dog2`, `dog3` are pointers to strings:
 
@@ -117,7 +117,9 @@ int main(void)
 }
 ```
 ```
+$ ./b.out
 
+pepe, pipo, papo
 ```
 + To print the values of LONG_MAX and LONG_MIN aligned.
 
@@ -132,8 +134,12 @@ int main(void)
 }
 ```
 ```
+$ ./c.out
 
+9223372036854775807 -> LONG_MAX
+9223372036854775807 -> LONG_MIN
 ```
+
 + to print the result of basic mathematical operations pretended by signs.
 
 ```
@@ -146,6 +152,11 @@ int main(void)
 
 }
 ```
+```
+$ ./d.out
+
+1 + 2 = 3
+10 - 20 = -10
 ```
 
 ## Authors :black_nib:
