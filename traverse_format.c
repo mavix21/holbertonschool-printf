@@ -11,7 +11,7 @@
 int traverse_format(const char *format, va_list args, char *buffer)
 {
 	char *formaters;
-	int buffer_len = 0, check;
+	int buffer_len = 0;
 
 	while (*format != '\0')
 	{
@@ -27,9 +27,7 @@ int traverse_format(const char *format, va_list args, char *buffer)
 			}
 			else
 			{
-				check = analize_formaters(formaters, args, buffer);
-				buffer = check_buffer(buffer, buffer_len, check);
-				buffer_len += check;
+				buffer_len += analize_formaters(formaters, args, buffer);
 				format += _strlen(formaters);
 				free(formaters);
 			}
