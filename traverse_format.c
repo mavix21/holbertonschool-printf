@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ * traverse_format - Goes through format
+ * @format: Format string
+ * @arg: Argument to be stored
+ * @buffer: Buffer in which the characters to be printed will be stored
+ *
+ * Return: Number of characters to be printed
+ */
 int traverse_format(const char *format, va_list args, char *buffer)
 {
 	char *formaters;
@@ -17,6 +25,7 @@ int traverse_format(const char *format, va_list args, char *buffer)
 			if (formaters == NULL)
 			{
 				*buffer = '%';
+				buffer_length++;
 			}
 			else
 			{
@@ -34,6 +43,5 @@ int traverse_format(const char *format, va_list args, char *buffer)
 		for (; *buffer != '\0'; buffer++)
 		;
 	}
-	
 	return (buffer_length);
 }
