@@ -49,6 +49,7 @@ int pos_first_ltr_or_perc(const char *format);
 int is_specifier(char c);
 int _isalpha(int);
 
+/* Auxiliar Functions */
 char *memset_checked(unsigned int, char);
 void print_buffer(char *, int);
 int get_length(char);
@@ -57,6 +58,7 @@ int analize_formaters(char *, va_list, char *);
 char *itoa_sgnd(va_list, int);
 char *itoa_unsgnd(va_list, int, int);
 int traverse_format(const char *, va_list, char *);
+char *check_buffer(char *, int, int);
 
 /* Storing functions */
 int store_arg(char, va_list, get_c c_st[], get_n n_st[], char *, int);
