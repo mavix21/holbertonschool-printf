@@ -14,7 +14,8 @@ char *check_buffer(char *buffer, int buffer_length, int n)
 
 	if ((buffer_length + n) >= 1023)
 	{
-		print_buffer(buffer - 1023, 1023);
+		buffer -= 1023;
+		print_buffer(buffer, 1023);
 		new_buffer = memset_checked(1024 * sizeof(char), '\0');
 		return (new_buffer);
 	}
