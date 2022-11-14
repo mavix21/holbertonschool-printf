@@ -119,7 +119,7 @@ int main(void)
 ```
 $ ./a.out
 
-Pepe, pipo, papo
+pepe, pipo, papo
 ```
 + To print the values of LONG_MAX and LONG_MIN aligned.
 
@@ -151,6 +151,12 @@ int main(void)
         _printf("%d - %d = %d\n", 10, 20, 10 - 20);
 
 }
+```
+```
+$ ./a.out
+
+1 + 2 = 3
+10 - 20 = -10
 ```
 
 ## Authors :black_nib:
