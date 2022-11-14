@@ -1,5 +1,5 @@
 <h1 align ="center">
-0;136;0c<img src="https://assets.website-files.com/6105315644a26f77912a1ada/610540e8b4cd6969794fe673_Holberton_School_logo-04-04.svg" height="36%" width="26%">
+<img src="https://assets.website-files.com/6105315644a26f77912a1ada/610540e8b4cd6969794fe673_Holberton_School_logo-04-04.svg" height="36%" width="26%">
 </h1>
 
 # _Printf
@@ -117,7 +117,7 @@ int main(void)
 }
 ```
 ```
-$ ./a.out
+$ ./b.out
 
 pepe, pipo, papo
 ```
@@ -134,7 +134,7 @@ int main(void)
 }
 ```
 ```
-$ ./a.out
+$ ./c.out
 
 9223372036854775807 -> LONG_MAX
 9223372036854775807 -> LONG_MIN
@@ -153,7 +153,7 @@ int main(void)
 }
 ```
 ```
-$ ./a.out
+$ ./d.out
 
 1 + 2 = 3
 10 - 20 = -10
