@@ -127,6 +127,18 @@ int main(void)
         _printf("%ld -> LONG_MIN\n", LONG_MAX);
 }
 ```
++ to print the result of basic mathematical operations pretended by signs.
+
+```
+#include "main.h"
+
+int main(void)
+{
+        _printf("%d + %d = %d\n", 1, 2, 1 + 2);
+        _printf("%d - %d = %d\n", 10, 20, 10 - 20);
+
+}
+```
 
 ## Authors :black_nib:
 
