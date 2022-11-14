@@ -37,18 +37,25 @@ int store_perc(va_list args, char *buffer)
 int store_str(va_list args, char *buffer)
 {
 	char *str;
+	int str_len;
 
 	str = va_arg(args, char *);
 	if (str == NULL)
 	{
 		str = "(null)";
+		str_len = 0;
 	}
+	else
+	{
+		str_len = _strlen(str);
+	}
+
 	for (; *str != '\0'; str++)
 	{
 		*buffer = *str;
 		buffer++;
 	}
-	return (_strlen(str));
+	return (str_len);
 }
 
 /**
