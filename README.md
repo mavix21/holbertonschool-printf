@@ -101,7 +101,7 @@ Unknown:[%r]
 Unknown:[%r]
 ```
 ## More Examples :technologist:
-```
+
 + To print the name of dogs in the form "Pepe, pipo, papo", followed by a new line,
 where `dog1`,`dog2`, `dog3` are pointers to strings:
 
@@ -116,9 +116,7 @@ int main(void)
        _printf("%s,%s,%s \n",dog1,dog2,dog3);
 }
 ```
-```
 
-```
 + To print the values of LONG_MAX and LONG_MIN aligned.
 
 ```
@@ -131,9 +129,7 @@ int main(void)
         _printf("%ld -> LONG_MIN\n", LONG_MAX);
 }
 ```
-```
 
-```
 + to print the result of basic mathematical operations pretended by signs.
 
 ```
@@ -145,7 +141,6 @@ int main(void)
         _printf("%d - %d = %d\n", 10, 20, 10 - 20);
 
 }
-```
 ```
 
 ## Authors :black_nib:
