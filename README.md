@@ -99,6 +99,22 @@ Len:[12]
 Unknown:[%r]
 Unknown:[%r]
 ```
+##More Examples :technologist:
+
++ To print the name of dogs in the form "Pepe, pipo, papo", followed by a new line,
+where `dog1`,`dog2`, `dog3` are pointers to strings:
+
+```
+#include "main.h"
+
+int main(void)
+{
+        char *dog1 = "pepe";
+        char *dog2 = "pipo";
+        char *dog3 = "papo";
+       _printf("%s,%s,%s \n",dog1,dog2,dog3);
+}
+```
 
 ## Authors :black_nib:
 
